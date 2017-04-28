@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const DATABASE_URL = process.env.DATABASE_URL || global.DATABASE_URL || 'postgresql://dev:dev@localhost/todos-app';
+const {DATABASE_URL} = process.env;
 
 exports.DATABASE = {
   client: 'pg',
@@ -9,3 +9,4 @@ exports.DATABASE = {
 };
 
 exports.PORT = process.env.PORT || 8080; 
+// console.log(DATABASE_URL);
